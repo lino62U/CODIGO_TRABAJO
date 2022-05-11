@@ -2,29 +2,67 @@
     font-family: sans-serif;
     text-align: center;
 }
-*tabla{
-    border-collapse: collapse;
-    margin: auto;
+body{
+    text-align: center;
+    margin: 10% 10%;
+    background-color: rgb(255, 255, 255);
 }
-*tabla thead {
-    background-color: #336288;
-    color: white;
+table tr td{
+    margin-top: auto;
+    border-bottom: 1px solid rgb(231, 219, 219);
+    
+}
+#justif{
+    width: 500px;
+}
+.btsLISA{
+    text-align: center;
+}
+thead th {
+    background-color: #ced9e2;
+    color: rgb(28, 22, 80);
+    padding: 20px 20px;
+    border-radius: 6px;
 }
 
-*tabla tr{
-    border-bottom: 1px solid #cbcbcb;
+tbody td{
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    color: rgb(5, 5, 5);
 }
-*tabla th, .tabla td{
-    border: none;
-    padding: 8px 20px;
+#titulo{
+    font: bold 50px 'Lucida Sans', sans-serif;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+input[type='text']{
+    background-color: #eff1f3;
+    width: 514px;
+    padding: 5px 10px 5px 10px;    
+    border-radius: 6px;
+    border-color: #eff;
+    text-align: left;
     
 }
 
-*tabla_datos{
-    margin: auto;
-    background-color: white;
+input[type='submit']{
+    background-color: #d4dee6;
+    padding: 5px 10px 5px 10px;    
+    border-radius: 50%;
+    border-color: #d4dee6;
+ 
+    font-weight: bold;
 }
-*tabla td{
-    background-color: white;
-    color: black;
+input[type='submit']:hover{
+    background-color: #abc9e0;
+    border-color: #d4dee6;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    font: bold;
+}
+
+.justif{
+    width: 100px;
 }
