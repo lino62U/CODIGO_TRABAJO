@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="control.css">
-    <script defer src="control.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORMULARIOS</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
 <body>
-    <table>
+    <div class="contenedor">
+        <h2>Formulario</h2>
+        <form>
+            <div class="relleno">
+                <div class="col_50">
+                    <input class="campos" id="nombre" type="text" placeholder="Nombre">
+                </div>
+                <div class="col_50">
+                    <input class="campos" id="apellido" type="text" placeholder="Apellido">
+                </div>
+                <div class="col_100">
+                    <input class="campos" id="email" type="text" placeholder="Email">
+                </div>
+                <div class="col_50">
+                    <input class="campos" id="telefono" type="text" placeholder="Telefono">
+                </div>
+                <button id="btnAgregar" class="btn" type="button">Agregar</button>
+            </div>
+        </form>
+    </div>
+    <h2 style="text-align:center;">Cllientes</h2>
+    <table id="tablaUsuarios" class="tabla">
         <thead>
-            <th>N°</th>
-            <th>APELLIDOS Y NOMBRES</th>
-            <th>ESTADO</th>
-            <th>JUSTIFICACIÓN</th>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Eliminar</th>
+            </tr>
         </thead>
-        <tbody id="inicio_cuerpo">
-
-        </tbody>
+        <tbody></tbody>
     </table>
-    
 </body>
 </html>
