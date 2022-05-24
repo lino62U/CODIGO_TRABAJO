@@ -9,7 +9,6 @@ const lista = ["APAZA APAZA NELZON JORGE","APAZA QUISPE ANGEL ABRAHAM","BENAVENT
 "QUILCA HUAMANI BRYAN","QUISPE ROJAS JAVIER WILBER","ROQUE SOSA OWEN HAZIEL","RUIZ MAMANI EDUARDO GERMAN","SUCASACA CHIRE EDWARD HENRY",
 "TAYA YANA SAMUEL OMAR","YAVAR GUILLEN ROBERTO GUSTAVO","ZAMALLOA MOLINA SEBASTIAN AGENOR","ZHONG CALLASI LINGHAI JOAQUIN"];
 
-
 for(let i=0;i<lista.length;i++){
     let tabla = document.getElementById('inicio');
 
@@ -34,25 +33,10 @@ addEventListener('click', (e) =>{
         xhr.open('POST',"asistencia.php");
         xhr.onload;
         xhr.send(form)
-
-        let win = window.open('asistencia.php','_blank');
-        win.focus();
-
     }   
 
     if(e.target.id == "consultar"){
-        
-        let xhr = new XMLHttpRequest();
-        let data = document.getElementById("registro");
-        let form = new FormData(data);
-
-        xhr.open('POST',"consulta.php");
-        xhr.onload;
-        xhr.send(form)
-
-        let win = window.open('consulta.php','_blank');
+        let win = window.open('consulta.html','_blank');
         win.focus();
     }
 })
-
-
