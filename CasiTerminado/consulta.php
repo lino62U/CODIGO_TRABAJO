@@ -1,23 +1,24 @@
 <?php
-//$leer = $_POST['info'];
-$leer = "noveas";
-echo $leer;
-
-$conexion = new mysqli("localhost","root","","asistencia");
-
+    $leer = $_GET['base'];
 ?>
-
 <?php
 ob_start();
 $conex = mysqli_connect("localhost","root","","asistencia");
 
-    $consulta = "SELECT * FROM $leer";
+    $consulta = "SELECT * FROM  `$leer`";
     $resultado = mysqli_query($conex,$consulta);
     if($resultado){
         echo "<table>";
+        echo "<thead";
+        echo "<tr>";
+        echo "<td>N</td>";
+        echo "<td>NOMBRES Y APELLIDOS</td>";
+        echo "<td>ESTADO</td>";
+        echo "<td>JUSTIFICACIÓN</td>";
+        echo "</thead";
+
         while($row = $resultado->fetch_array()){    
 
-            
             $id = $row['N'];
             $nombre = $row["NOMBRE"];
             $estado = $row["ASISTENCIA"];
@@ -44,5 +45,5 @@ $conex = mysqli_connect("localhost","root","","asistencia");
     $dompdf->loadHtml($html);
     $dompdf->setPaper('letter');
     $dompdf->render();
-    $dompdf->stream("archivo.pdf",array("Attachment" => true));
+    $dompdf->stream("{$leer}.pdf",array("Attachment" => true));
 ?>
