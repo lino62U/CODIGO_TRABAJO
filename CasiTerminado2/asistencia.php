@@ -6,10 +6,10 @@
     $fecha = $_POST['archivo'];
     
     $sql = "CREATE TABLE `$fecha`(
-        N INT(5) NOT NULL,
-        NOMBRE VARCHAR(100) NOT NULL,
-        ASISTENCIA VARCHAR(20) NOT NULL,
-        JUSTIFICACION VARCHAR(200) NOT NULL
+        N INT(5),
+        NOMBRE VARCHAR(100),
+        ASISTENCIA VARCHAR(1),
+        JUSTIFICACION TEXT(1000)
     )";
 
     $conexion->query($sql);
