@@ -11,10 +11,10 @@ $conex = mysqli_connect("localhost","root","","asistencia");
         echo "<table>";
         echo "<thead";
         echo "<tr>";
-        echo "<td>N</td>";
-        echo "<td>NOMBRES Y APELLIDOS</td>";
-        echo "<td>ESTADO</td>";
-        echo "<td>JUSTIFICACIÓN</td>";
+        echo "<th>N</th>";
+        echo "<th>APELLIDOS Y NOMBRES</th>";
+        echo "<th>ESTADO</th>";
+        echo "<th>JUSTIFICACIÓN</th>";
         echo "</thead";
 
         while($row = $resultado->fetch_array()){    
@@ -24,15 +24,50 @@ $conex = mysqli_connect("localhost","root","","asistencia");
             $estado = $row["ASISTENCIA"];
             $justi = $row["JUSTIFICACION"];
             
+            $iDtxt;
+            if($id<10){
+                $iDtxt='0'.$id;
+            }else{
+                $iDtxt=$id;
+            }
+
             echo "<tr>";
-                echo "<td>$id</td>";
-                echo "<td>$nombre</td>";
-                echo "<td>$estado</td>";
-                echo "<td>$justi</td>";
+                echo "<td class='orden'>$iDtxt</td>";
+                echo "<td class='name'>$nombre</td>";
+                echo "<td class='estado'>$estado</td>";
+                echo "<td class='justificacion'>$justi</td>";
 
             echo "</tr>";
         }
         echo "</table>";
+        echo "<style> 
+                table, td, th {
+                    border: 1px solid;
+                    padding: 5px;
+                    font-size:10px;s
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-family: 'Lucida Sans Unicode', sans-serif;
+                }
+                table th{
+                    background-color:#000;
+                    color:white;
+                }
+                .orden{
+                    text-align: center;
+                    width:5%;
+                    
+                }
+                .estado{
+                    width:5%;
+                    text-align: center;
+                }
+                .name{
+                    width:35%;
+                }
+            </style>";
     }
 
     $html = ob_get_clean();
