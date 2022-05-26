@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 20%;
+            background-color: rgb(250, 249, 247);
+        }
+        input[type='submit'] {
+            padding: 25px;
+            margin-left: 20px;
+            border-radius: 15px;
+            background-color: black;
+            font-weight: bold;
+            color: white;
+            font-size: 25px;
+        }
+        input[type='submit']:hover {
+            background-color: white;
+            font-weight: bold;
+            color: black;
+        }
+        
+        input[type='text'] {
+            padding: 25px;
+            margin-left: 50px;
+            border-radius: 15px;
+            font-size: 25px;
+            width: 520px;
+            background-color: rgb(230, 238, 238);
+        }
+        input[type='text']:hover{
+            background-color: white;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <form action="consulta.php" method="get">
+        <input type="submit" value="Descargar pdf">
+        <input type="text" placeholder="Nombre_Archivo" name="base">      
+
+    </form>
+
+</body>
+</html>
